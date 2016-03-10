@@ -10,4 +10,5 @@ RUN yum -y install passwd openssh-server java-1.8.0-openjdk.x86_64 && \
     service sshd start && \
     service sshd stop
 
-ENTRYPOINT ["/init"]
+EXPOSE 22
+ENTRYPOINT []

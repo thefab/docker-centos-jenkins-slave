@@ -6,8 +6,7 @@
 
 [This image on the "Docker Hub"](https://hub.docker.com/r/thefab/centos-jenkins-slave/)
 
-**WARNING: alpha stage quality**
-
 ## Features
 
-A "Jenkins Slave" docker image for "Jenkins Docker Plugin" based on CentOS
+- A "Jenkins Slave" docker image for "Jenkins Docker Plugin" based on CentOS 6
+- Built on [Docker Centos Opinionated](https://github.com/thefab/docker-centos-opinionated) with S6 init system disabled

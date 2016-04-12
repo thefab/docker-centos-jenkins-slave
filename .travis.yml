@@ -5,8 +5,6 @@ services:
 
 script:
     - make build
-    - docker tag `docker images -q |head -1` thefab/centos-jenkins-slave:latest
-    - docker tag `docker images -q |head -1` thefab/centos-jenkins-slave:centos6
-    - docker tag `docker images -q |head -1` thefab/centos-jenkins-slave:centos6.${TRAVIS_COMMIT}
-    - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-    - docker push thefab/centos-jenkins-slave
+deploy:
+    provider: script
+    script: make release
